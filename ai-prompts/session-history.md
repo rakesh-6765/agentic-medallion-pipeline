@@ -1,6 +1,7 @@
 # Actual session history and prompt provenance
 
-Implementation session: **2026-09-09**. This is a summarized record, not a
+Implementation session: **2026-09-09**, with Databricks/submission follow-up on
+**2026-09-10**. This is a summarized record, not a
 verbatim transcript. The user permits prompt summaries. Only the short build
 request below is quoted as exact user wording; the pasted guide is summarized
 rather than reproduced.
@@ -102,6 +103,29 @@ validation. No separate human “Bronze prompt” or “Silver prompt” is impl
   [validation results](../validation-results.md); cloud and participant
   completion remain explicitly unverified.
 
+## Participant follow-up: 2026-09-10
+
+| ID | Actual input / action | Response and outcome |
+|---|---|---|
+| U4 | Participant reported successful Databricks `run_pipeline`, then supplied the four-table dashboard mapping and placeholder-mismatch exception | Assistant verified the exact mapping locally and in the wheel; added detailed mismatch diagnostics/tests, installation checks and ready-to-paste SQL |
+| U5 | Participant confirmed the whole project ran end to end on Databricks and a dashboard was created; requested the submission checklist before cleanup | Assistant provided the checklist and distinguished required test/artifact files from disposable generated outputs |
+| U6 | Participant requested completion of remaining work, their action items and cleanup | Assistant updated documents and real prompt records, retained compact evidence, removed reproducible clutter and prepared the handoff |
+| U7 | Participant asked what accepted/changed/rejected decisions mean, then requested documentation | Assistant explained the categories and recorded supported actions without inventing technical approvals |
+| U8 | Participant supplied four Databricks screenshots and explicitly accepted the three chart differences identified in review | Evidence index and dashboard decision records now disclose product-count, donut-grouping and bin-order differences; published view is visible |
+| U9 | Participant supplied candidate details in the repository and requested first-person completion of remaining items | Assistant drafted reflection, workflow, decisions and form answers from recorded facts; unprovided independent-review claims and account-bound actions remain unclaimed |
+
+Cloud completion is participant-reported, with supplied screenshots of a
+published dashboard. Candidate identity/role/experience were supplied separately.
+Exact cloud run IDs/metrics, engine/runtime version and the specific remediation
+of the earlier mismatch remain unrecorded. The reported three-minute duration is
+not an engine version. First-person drafts use this evidence; they do not invent
+technical approvals or claim the participant personally performed local tests.
+
+The preserved evidence includes the 67-test historical full suite and a later
+25-test Gold/dashboard run with SQL-template regressions. Those test counts
+overlap. The initial Git commit already existed at cleanup time; the assistant
+did not create new commits or reconstruct historical iterations.
+
 ## Layer-specific records
 
 - [Data generation](data-generation.md)
@@ -113,5 +137,6 @@ validation. No separate human “Bronze prompt” or “Silver prompt” is impl
 - [Documentation](documentation.md)
 
 Each separates request provenance, assistant output, validation, and participant
-review. Participant **accepted / changed / rejected** fields remain pending.
-No commit history or Databricks success is reconstructed.
+actions. First-person decision entries were drafted at the participant's request;
+the cloud-dashboard divergence acceptance was explicitly stated by them. No
+independent review, missing cloud measurement or new commit history is reconstructed.

@@ -40,6 +40,6 @@ Silver validation was not weakened.
 
 | Participant review field | Value |
 |---|---|
-| Accepted / changed / rejected | Pending |
-| Rationale and any participant modifications | Pending |
-| Independent participant validation | Pending |
+| Accepted / changed / rejected | I used the AI-generated synthetic sources in the delivered project; no separate generator rejection or modification is recorded |
+| Rationale and any participant modifications | The sources provide known quality faults for the exercise without real customer data; the persona/source-tier correction was made by AI, not independently by me |
+| Independent participant validation | I confirmed end-to-end Databricks execution; generator fault counts and hashes are attributed to the assistant's tests, not a separate manual audit by me |

@@ -1,0 +1,266 @@
+{
+  "as_of_date": "2026-01-31",
+  "dashboard": "artifacts/local/dashboard.html",
+  "dashboard_status": "SUCCESS",
+  "finished_at": "2026-09-09T12:29:00.932363+00:00",
+  "high_value_threshold": "1000",
+  "quality_metrics": [
+    {
+      "check_name": "business_logic",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 10000,
+      "rows_total": 10000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "customers",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "completeness",
+      "pct_passed": 99.5,
+      "rows_failed": 50,
+      "rows_passed": 9950,
+      "rows_total": 10000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "customers",
+      "threshold_operator": ">",
+      "threshold_passed": true,
+      "threshold_pct": 99.0
+    },
+    {
+      "check_name": "overall",
+      "pct_passed": 99.3,
+      "rows_failed": 70,
+      "rows_passed": 9930,
+      "rows_total": 10000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "customers",
+      "threshold_operator": ">=",
+      "threshold_passed": false,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "referential_integrity",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 10000,
+      "rows_total": 10000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "customers",
+      "threshold_operator": ">",
+      "threshold_passed": true,
+      "threshold_pct": 99.9
+    },
+    {
+      "check_name": "type_validation",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 10000,
+      "rows_total": 10000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "customers",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "uniqueness",
+      "pct_passed": 99.8,
+      "rows_failed": 20,
+      "rows_passed": 9980,
+      "rows_total": 10000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "customers",
+      "threshold_operator": ">=",
+      "threshold_passed": false,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "business_logic",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 100000,
+      "rows_total": 100000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "orders",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "completeness",
+      "pct_passed": 99.7,
+      "rows_failed": 300,
+      "rows_passed": 99700,
+      "rows_total": 100000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "orders",
+      "threshold_operator": ">",
+      "threshold_passed": true,
+      "threshold_pct": 99.0
+    },
+    {
+      "check_name": "overall",
+      "pct_passed": 99.58,
+      "rows_failed": 420,
+      "rows_passed": 99580,
+      "rows_total": 100000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "orders",
+      "threshold_operator": ">=",
+      "threshold_passed": false,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "referential_integrity",
+      "pct_passed": 99.92,
+      "rows_failed": 80,
+      "rows_passed": 99920,
+      "rows_total": 100000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "orders",
+      "threshold_operator": ">",
+      "threshold_passed": true,
+      "threshold_pct": 99.9
+    },
+    {
+      "check_name": "type_validation",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 100000,
+      "rows_total": 100000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "orders",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "uniqueness",
+      "pct_passed": 99.96,
+      "rows_failed": 40,
+      "rows_passed": 99960,
+      "rows_total": 100000,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "orders",
+      "threshold_operator": ">=",
+      "threshold_passed": false,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "business_logic",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 500,
+      "rows_total": 500,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "products",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "completeness",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 500,
+      "rows_total": 500,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "products",
+      "threshold_operator": ">",
+      "threshold_passed": true,
+      "threshold_pct": 99.0
+    },
+    {
+      "check_name": "overall",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 500,
+      "rows_total": 500,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "products",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "referential_integrity",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 500,
+      "rows_total": 500,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "products",
+      "threshold_operator": ">",
+      "threshold_passed": true,
+      "threshold_pct": 99.9
+    },
+    {
+      "check_name": "type_validation",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 500,
+      "rows_total": 500,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "products",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    },
+    {
+      "check_name": "uniqueness",
+      "pct_passed": 100.0,
+      "rows_failed": 0,
+      "rows_passed": 500,
+      "rows_total": 500,
+      "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+      "table_name": "products",
+      "threshold_operator": ">=",
+      "threshold_passed": true,
+      "threshold_pct": 100.0
+    }
+  ],
+  "reconciliation": {
+    "eligible_completed_orders": 30077,
+    "eligible_revenue": "11720321.50",
+    "excluded_dimension_orders": 537,
+    "excluded_status_orders": 68966,
+    "gold_revenue": {
+      "customer_segmentation": "11720321.50",
+      "daily_trends": "11720321.50",
+      "revenue_by_customer": "11720321.50",
+      "sales_by_product": "11720321.50",
+      "weekly_trends": "11720321.50"
+    },
+    "reconciled": true,
+    "silver_failed_orders": 420,
+    "silver_pass_orders": 99580,
+    "source_orders": 100000,
+    "valid_dimension_orders": 99043
+  },
+  "rows": {
+    "bronze": {
+      "customers": 10000,
+      "orders": 100000,
+      "products": 500
+    },
+    "gold": {
+      "customer_segmentation": 4,
+      "daily_weekly_trends": 419,
+      "revenue_by_customer": 9930,
+      "sales_by_product": 500
+    },
+    "silver": {
+      "customers": 10000,
+      "orders": 100000,
+      "products": 500
+    }
+  },
+  "run_id": "2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7",
+  "source_dir": "data",
+  "spark_version": "4.0.4",
+  "started_at": "2026-09-09T12:28:52.352500+00:00",
+  "status": "SUCCESS"
+}

@@ -2,6 +2,15 @@
 
 Observed on **2026-09-09**, not a claim of Databricks execution.
 
+**2026-09-10 update:** the participant confirmed the whole project ran end to end
+on Databricks and a dashboard was created. Cloud measurements/identifiers have
+not been supplied; the numbers below remain explicitly local.
+
+After SQL-template diagnostic improvements, **25 targeted Gold/dashboard tests
+passed in 16.04s** on 2026-09-10. The exact four-table workspace mapping also
+generated all five queries from an isolated wheel import.
+See the [preserved evidence index](evidence/README.md).
+
 ## Reproducible commands and environment
 
 ```bash
@@ -15,8 +24,10 @@ uv build --wheel --quiet
 - Final local run: `2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7`.
 - Pipeline status: SUCCESS. Dashboard status: SUCCESS.
 - Wheel build succeeded, including all Gold and dashboard SQL resources.
-- Actual JUnit XML, Parquet tables, run manifest and HTML are under the ignored
-  `artifacts/` directory; regenerate these rather than treating them as source.
+- Actual JUnit reports, run manifest, quality report and browser screenshot are
+  preserved in [evidence](evidence/README.md). Reproducible Parquet/HTML outputs,
+  local environments, builds and duplicate generated SQL were removed during
+  submission cleanup; the commands above recreate them after README setup.
 
 ## Persisted row counts
 
@@ -69,7 +80,7 @@ unchanged business results and replacement run IDs, not appended duplicates.
 
 The [actual local dashboard screenshot](evidence/local-dashboard.png) records the
 earlier verified run `c82b5ef7-ad01-41b2-878f-27cdb076f0d6`; it is not relabeled as
-a final-run capture. The latest HTML is at `artifacts/local/dashboard.html`.
+a final-run capture. HTML can be regenerated at `artifacts/local/dashboard.html`.
 The renderer is unchanged, and both runs have identical business figures. Five charts render,
 including the required product bar chart, revenue histogram and segmentation
 pie/donut. Browser checks verified:
@@ -102,8 +113,9 @@ no significant issues in the targeted recheck of their fixes and regressions.
 
 ## Still requires participant/workspace action
 
-Databricks Delta execution, Unity Catalog permissions, the SQL warehouse,
-dashboard creation/publishing and workspace evidence have **not** been verified
-locally. Run the provided notebook and dashboard setup in the authorized workspace.
+The participant already confirmed successful Databricks execution and dashboard
+creation. Attach actual cloud runtime/run details, quality/reconciliation output
+and dashboard evidence; confirm publication/reviewer access as appropriate.
 Complete personal details, participant acceptance/rejection judgments and an
 authentic reflection. Review the staged files and create/publish commits yourself.
+See the consolidated [participant action items](submission-checklist.md).

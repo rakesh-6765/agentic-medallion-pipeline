@@ -48,8 +48,19 @@ the specialist confirmed both findings resolved and no significant issues in
 those fixes. The earlier actual screenshot is retained with its original run ID.
 No clean initial review is claimed.
 
+## Actual Databricks follow-up: 2026-09-10
+
+The participant reported a placeholder mismatch during dashboard SQL generation
+after the pipeline succeeded. The assistant reproduced the exact call against
+source and the built wheel successfully, improved mismatch diagnostics and added
+regressions, documented notebook installation/restart checks and produced
+rendered SQL as a workaround. The actual mismatched cloud file was not inspected.
+The participant subsequently confirmed end-to-end execution and dashboard
+creation, without stating which remediation resolved their environment.
+See [the dashboard prompt record](dashboard.md) for the detailed account.
+
 | Participant review field | Value |
 |---|---|
-| Accepted / changed / rejected | Pending |
-| Rationale and any participant modifications | Pending |
-| Independent participant validation | Pending |
+| Accepted / changed / rejected | I supplied the exact dashboard-helper call and exception for AI-assisted investigation, then confirmed the project and dashboard worked; the record does not specify which remediation I used |
+| Rationale and any participant modifications | I needed usable dashboard SQL after the pipeline succeeded; I do not claim a confirmed stale-wheel root cause or that I independently found the earlier implementation bugs |
+| Independent participant validation | I confirmed cloud completion and supplied published-dashboard screenshots; the assistant's package/test checks remain separately attributed |

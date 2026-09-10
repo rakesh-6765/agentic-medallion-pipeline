@@ -4,10 +4,14 @@ A standalone, synthetic e-commerce batch project: deterministic CSVs → raw Bro
 → row-preserving, quality-checked Silver → four SQL Gold outputs → dashboard.
 It implements the supplied AI Capability Exercise without reproducing its brief.
 
-**Evidence boundary:** local Spark and managed Databricks Delta are separate
-execution targets. No Databricks account, permission, cloud run, dashboard publish,
-or participant sign-off has been supplied. This is not a ready-to-submit claim.
-See [test evidence](test-strategy.md) and the checklist below.
+**Current status (2026-09-10):** the participant confirmed successful end-to-end
+execution on Databricks and creation of the dashboard. Local results below were
+directly verified by the assistant; cloud execution is participant-reported.
+Four actual cloud screenshots are attached, including a published view; their
+three participant-accepted visualization differences are disclosed. Cloud run
+details, reviewer access and final wording approval remain separate.
+See [your submission action items](submission-checklist.md) and the
+[evidence index](evidence/README.md).
 
 **Final post-fix verification:** **67 tests passed in 28.97s**, including CSV
 doubled quotes/quoted newlines, Unicode whitespace, persistence/rerun, and
@@ -33,7 +37,8 @@ uv sync --extra local --extra dev
 
 On the implementation machine, `uv` is
 `/opt/homebrew/opt/uv/bin/uv`; use that absolute executable if it is not on `PATH`.
-`uv.lock` records the dependency resolution; no git commit is claimed.
+`uv.lock` records the dependency resolution. Local environments and generated
+outputs were removed during submission cleanup; these commands recreate them.
 `setup-java` explicitly downloads a full JDK 21 into `.venv`, not a global install.
 Local Spark binds both worker and driver Python to the active interpreter.
 Do not install the `local` extra into a Databricks runtime.
@@ -138,25 +143,32 @@ Official references:
 | Verification and issues | [Validation results](validation-results.md), [tests](test-strategy.md), [debugging](debugging-notes.md), [review notes](code-review-notes.md) |
 | Generator details | [Generation notes](src/data_generation/DATA_GENERATION_NOTES.md), [seed-data notes](database/seed-data-notes.md) |
 | Tool context and provenance | [Workflow](tool-workflow.md), [prompt history](ai-prompts/session-history.md), [Copilot files](tool-specific/copilot-workflow/project-context.md) |
-| Participant-owned completion | [Candidate information](candidate-info.md), [reflection](reflection.md), [AI usage summary](final-ai-usage-summary.md) |
+| First-person submission drafts | [Candidate information](candidate-info.md), [reflection](reflection.md), [AI usage summary](final-ai-usage-summary.md), [form answers](submission-answers.md) |
 
 The source directory is installed as the Python package `medallion`; use package
 imports, not `python src/pipeline.py`.
 
-## Remaining completion checklist
+## Submission status
 
-- [x] Final post-fix suite: 67 passed; JUnit evidence in `artifacts/test-results.xml`.
+- [x] Full post-fix suite: 67 passed; [preserved JUnit report](evidence/local-tests-2026-09-09.xml).
+- [x] Subsequent SQL/dashboard validation: 25 passed; [follow-up report](evidence/dashboard-tests-2026-09-10.xml).
 - [x] Full-size local run and persisted outputs verified; see `test-strategy.md`.
 - [x] All 18 quality metrics, exclusions, and Gold reconciliation checked.
 - [x] Browser visual/filter/reset checks passed; actual results in `test-strategy.md`.
 - [x] Final post-review full run and wheel rebuild verified.
 - [x] Retain actual browser evidence and resolve both specialist findings.
-- [ ] Run the notebook and dashboard in an authorized Databricks workspace.
-- [ ] Supply participant identity/role and accepted/changed/rejected decisions.
-- [ ] Write the participant's own reflection; replace no pending field with an AI guess.
+- [x] Databricks end-to-end run and dashboard creation confirmed by participant.
+- [x] Attach supplied cloud dashboard screenshots and disclose accepted differences.
+- [x] Populate supplied identity/role and draft first-person reflection/decisions.
+- [x] Prepare first-person form answers with explicit AI/work attribution.
+- [ ] Confirm final wording, organizer tool acceptance and reviewer access.
+- [ ] Add cloud run details if available; local figures are not cloud measurements.
 - [ ] Review the staged project files, then create and publish the desired commits.
+- [ ] Submit through the actual assessment form; no submission receipt is claimed.
 
 Specialist review found two bugs; fixes and regressions passed final validation.
 The targeted recheck confirmed both findings resolved, with no significant issues
-in the reviewed fixes. Project files are staged for owner review; no commits or
-remote pushes were made. Runtime dependencies and local outputs remain ignored.
+in the reviewed fixes. Changes are staged for owner review; this cleanup created
+no commits or remote pushes and preserved the existing initial commit.
+Runtime dependencies and local outputs were removed, not source/tests/seed data.
+Compact evidence remains in [evidence](evidence/README.md).

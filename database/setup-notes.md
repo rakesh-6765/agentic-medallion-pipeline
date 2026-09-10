@@ -1,6 +1,8 @@
 # Unity Catalog ingestion and managed layers
 
-These are setup instructions, **not evidence of a completed Databricks run**.
+These are setup instructions, not a cloud execution log. The participant
+confirmed end-to-end Databricks execution and dashboard creation on 2026-09-10;
+the detailed cloud evidence remains to be attached in [evidence](../evidence/README.md).
 `notebooks/run_pipeline.py` is the Databricks entrypoint. It uses
 `medallion.pipeline.run_pipeline` with `CatalogStore`, and owns credentials,
 Spark lifecycle, run metadata, reconciliation, Delta persistence and the success
@@ -13,7 +15,8 @@ you can create a catalog or provision a metastore in Free Edition. Ask the owner
 for the required privileges if the operation is denied; do not hard-code broad
 `GRANT` statements or credentials.
 
-Review `schema.sql`, replace `REPLACE_WITH_CATALOG` consistently, and adjust
+Review `schema.sql`, which the participant configured for catalog `workspace`.
+Replace that catalog consistently if using another authorized catalog, and adjust
 `medallion_source`, `medallion_bronze`, `medallion_silver`, `medallion_gold` if
 these are not dedicated to this exercise. The three layer schemas match
 `CatalogStore`'s default `prefix="medallion"`. If changing the notebook's `prefix`

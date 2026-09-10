@@ -3,8 +3,12 @@
 ## Verification status
 
 The local renderer and SQL are implemented, with automated fixture assertions.
-**No Databricks dashboard import, publish, workspace query, or cloud execution is
-claimed here.** The steps below require execution in your workspace. No Lakeview
+**On 2026-09-10, the participant confirmed successful end-to-end Databricks
+execution and creation of a dashboard.** Four supplied screenshots include a
+published view and three participant-accepted chart differences, recorded in the
+[evidence index](../../evidence/README.md). Exact cloud run metrics and reviewer
+access are not verified; this guide remains reproducible instructions rather
+than an assistant-observed cloud execution log. No Lakeview
 JSON is supplied: this project has not verified an official import schema and
 does not invent an ostensibly importable artifact. Save a genuine workspace
 export after building and verifying the dashboard if an import artifact is needed.
@@ -91,6 +95,58 @@ Use actual catalog/schema identifiers containing letters, digits or underscores
 SQL fragments, backticks, quotes, wildcards, and unsupported identifier characters.
 If your workspace names require other characters, manually quote verified names
 in the SQL editor rather than weakening substitution validation.
+
+### Troubleshooting placeholder mismatch
+
+`ValueError: SQL replacement names must match placeholders exactly` happens
+before Spark executes SQL. It does not indicate a missing table or missing
+catalog permission. The four-key example above is valid for the current package.
+Inspect the files actually loaded by your Databricks notebook:
+
+```python
+import re
+import medallion.dashboard
+from importlib.resources import files
+
+resource = files("medallion.dashboard").joinpath("dashboard_queries.sql")
+print("Loaded dashboard module:", medallion.dashboard.__file__)
+print("Loaded SQL resource:", resource)
+print("Placeholders:", sorted(set(
+    re.findall(r"\{\{([a-z_]+)\}\}", resource.read_text(encoding="utf-8"))
+)))
+```
+
+Expected placeholders: `customer_segmentation`, `daily_weekly_trends`,
+`revenue_by_customer`, `sales_by_product`. An older template may lack the
+customer-revenue histogram. A template edited to contain concrete table names
+instead of `{{...}}` placeholders will also fail validation. Keep the packaged
+SQL unchanged; paste the **rendered output** into dashboard SQL datasets.
+
+If the loaded files are outdated, build a fresh wheel locally with
+`uv build --wheel`, upload it to your authorized Unity Catalog volume (replace
+the older upload), and install it in a notebook cell:
+
+```python
+%pip install --force-reinstall --no-deps /Volumes/workspace/medallion_source/raw/databricks_medallion_pipeline-0.1.0-py3-none-any.whl
+```
+
+Adjust the path to your actual uploaded wheel. In a **separate cell**, run:
+
+```python
+dbutils.library.restartPython()
+```
+
+Then rerun the diagnostic and the original query-generation cell. If
+`medallion.dashboard.__file__` still points to an older Git folder, update that
+folder or remove its explicitly added `sys.path` entry before restarting;
+a folder earlier on the import path can shadow the newly installed wheel.
+Do not remove a required table key or relax strict substitution to hide a stale
+template: doing so can omit a required dashboard dataset.
+
+Query generation only reads package resources and produces SQL text. There is
+no need to rerun the Bronze/Silver/Gold pipeline to refresh these package files.
+
+### Create the dashboard datasets
 
 1. Run `notebooks/run_pipeline.py` against the supplied notebook Spark session.
    This entrypoint calls `medallion.pipeline.run_pipeline` with `CatalogStore`.

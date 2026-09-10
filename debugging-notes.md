@@ -59,6 +59,20 @@ earlier 63-test state. The specialist's targeted recheck confirmed both findings
 resolved, with no significant issues in the corrected code. The actual screenshot
 from the earlier verified run is retained with its original run identity.
 
+## Databricks dashboard placeholder follow-up: 2026-09-10
+
+The participant reported the SQL replacement-name error after the Databricks
+pipeline succeeded. Their exact four-table mapping works against current source
+and an isolated wheel import. The assistant added template-path and
+missing/unexpected-key diagnostics, regression tests, inspection/reinstallation
+instructions and rendered SQL as an alternative.
+
+The mismatch happens before Spark SQL executes. An older/edited/shadowed package
+resource was a plausible cause, not a confirmed inspection of their environment.
+The participant later confirmed end-to-end cloud execution/dashboard creation but
+did not specify which remediation they used. The 25-test Gold/dashboard suite
+passed after these changes; its report is preserved under `evidence/`.
+
 ## Runbook for subsequent problems
 
 These are diagnostic steps, **not** additional incidents claimed to have occurred:
@@ -78,4 +92,6 @@ These are diagnostic steps, **not** additional incidents claimed to have occurre
 7. For cloud errors, verify actual volume/catalog privileges and current serverless
    restrictions. Local success is not a cloud connectivity fallback.
 
-Participant diagnosis, time spent, and acceptance of these fixes remain pending.
+The participant's first-person debugging account is drafted in
+[reflection](reflection.md). It records the reported cloud error and successful
+outcome, but not an unprovided root cause or personal time spent on diagnosis.

@@ -190,6 +190,53 @@ def test_dashboard_queries_are_strict_and_package_resources_exist():
         assert files("medallion.gold").joinpath(name).is_file()
 
 
+def test_workspace_dashboard_query_example():
+    tables = {
+        name: f"workspace.medallion_gold.{name}"
+        for name in (
+            "sales_by_product", "revenue_by_customer",
+            "daily_weekly_trends", "customer_segmentation",
+        )
+    }
+    queries = dashboard_queries(tables)
+    assert len(queries) == 5
+    assert "`workspace`.`medallion_gold`.`revenue_by_customer`" in queries[
+        "customer_revenue_distribution"
+    ]
+
+
+@pytest.mark.parametrize(
+    "template, missing, unexpected",
+    [
+        ("SELECT * FROM {{sales_by_product}}", [], ["revenue_by_customer"]),
+        (
+            "SELECT * FROM {{sales_by_product}} JOIN {{customer_segmentation}}",
+            ["customer_segmentation"], ["revenue_by_customer"],
+        ),
+        (
+            "SELECT * FROM workspace.medallion_gold.sales_by_product",
+            [], ["revenue_by_customer", "sales_by_product"],
+        ),
+    ],
+)
+def test_mismatched_dashboard_template_reports_loaded_resource(
+    monkeypatch, tmp_path, template, missing, unexpected
+):
+    resource = tmp_path / "dashboard_queries.sql"
+    resource.write_text(template, encoding="utf-8")
+    monkeypatch.setattr("medallion.gold.sql_resources.files", lambda package: tmp_path)
+    with pytest.raises(ValueError, match="replacement names") as error:
+        dashboard_queries({
+            "sales_by_product": "workspace.medallion_gold.sales_by_product",
+            "revenue_by_customer": "workspace.medallion_gold.revenue_by_customer",
+        })
+    message = str(error.value)
+    assert str(resource) in message
+    assert f"Missing replacements: {missing}" in message
+    assert f"unexpected replacements: {unexpected}" in message
+    assert "restart Python" in message
+
+
 def _fake_datasets():
     payload = '</script><script>alert("not executable")</script>&<b>name</b>'
     return {

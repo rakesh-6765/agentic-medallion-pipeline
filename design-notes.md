@@ -97,5 +97,7 @@ Production work would require access controls, scheduling/locking, source
 versioning, retention, incremental semantics, observability, and cross-table
 publication design. None is claimed implemented by this exercise.
 
-All choices above are assistant-authored; participant accepted/changed/rejected
-decisions remain pending in [review notes](code-review-notes.md).
+The implementation choices above originated with the assistant. First-person
+participant records now describe actual use, catalog configuration and explicit
+dashboard acceptance in [review notes](code-review-notes.md), without asserting
+an independent review of every design rule.

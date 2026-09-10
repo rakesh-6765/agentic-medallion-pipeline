@@ -3,7 +3,8 @@
 ## Review provenance
 
 This document records **assistant inspection and implementation decisions**.
-No participant review or independent human approval has been supplied.
+Participant execution, catalog changes and explicit dashboard-divergence
+acceptance are recorded below; no independent line-by-line code review is claimed.
 Test outcomes are linked to
 [test evidence](test-strategy.md), not invented reviewer sign-offs.
 
@@ -12,7 +13,8 @@ code**. The coordinator corrected both and added regressions; the final suite
 passed **67 tests in 28.97s**, and the full run/wheel succeeded. The targeted
 specialist recheck confirmed both findings resolved and found no significant
 issues in those fixes. This was not an initially clean review.
-There are no reported commits. Specialist findings are distinct from participant
+An initial commit now exists; this finalization created no new commits.
+Specialist findings are distinct from participant
 review or approval.
 
 Documentation inspection read the plan, contracts, configuration, CLI/runtime,
@@ -40,7 +42,8 @@ A sibling agent proposed expanding Silver's enum to accept the accidentally
 serialized Gold personas. The coordinator rejected that proposal because the
 source contract explicitly requires Premium/Standard/Basic; the generator was
 corrected instead. This is recorded AI-to-AI review, not invented participant
-acceptance/rejection. Participant fields below remain pending.
+acceptance/rejection. The first-person records below distinguish my recorded
+decisions from implementation choices made by the assistant.
 
 ## Assistant review checklist
 
@@ -53,21 +56,49 @@ acceptance/rejection. Participant fields below remain pending.
 | Operational safety | Explicit Parquet/Delta stores, ownership check, RUNNING/SUCCESS states; multi-table atomicity not claimed |
 | Dashboard meaning | Product/category filters cannot honestly filter preaggregated snapshot-wide histogram/trends/segments |
 | Data exposure | Synthetic sources only; rendered aggregates do not need names/email/order details |
-| Verification boundary | Final post-fix suite 67 passed and full-default rerun SUCCESS; earlier browser PASS and saved screenshot; both specialist findings resolved; cloud unverified |
+| Verification boundary | Full suite 67 passed, subsequent SQL/dashboard suite 25 passed; both specialist findings resolved; cloud run/dashboard completion reported by participant on 2026-09-10, detailed cloud evidence pending |
 
 ## Participant decision register
 
-These fields belong to the participant. Blank/pending is intentional.
+Record your judgment of significant AI suggestions:
+
+- **Accepted:** Used the suggestion unchanged; explain why it fits the requirement.
+- **Changed:** Modified the suggestion; describe the change and its reason.
+- **Rejected:** Did not use the suggestion; explain why and what you used instead.
+
+Not every activity needs all three categories. If no suggestion was rejected,
+say so only if that reflects your actual review. An assistant correcting its own
+code is not a participant rejection. Example wording is not evidence of a decision.
+
+### Decisions supported by the recorded interaction
+
+| Decision / action | Recorded disposition | Evidence and limits |
+|---|---|---|
+| Build a standalone project with an implementation plan | Accepted / explicitly requested | Participant requested a plan and separate solution and approved the proposed project location |
+| Configure setup SQL for the actual catalog | Changed | The participant's existing staged change replaced `REPLACE_WITH_CATALOG` with `workspace`; their dashboard query example also used `workspace.medallion_gold` |
+| Use the delivered pipeline and dashboard workflow on Databricks | Used and validated end to end | Participant confirmed the complete project ran and a dashboard was created; this does not imply detailed acceptance of every rule or edge case |
+| Finalize submission documents and remove generated local clutter | Accepted / explicitly authorized | Participant requested completion of pending documentation, identification of their action items and cleanup |
+| Keep the current cloud dashboard instead of applying the proposed chart corrections | Accepted current differences / declined further changes | I explicitly accepted the displayed product count, category donut and bin ordering; these remain disclosed rather than claimed compliant |
+
+### My technical decision record
+
+First-person draft requested by me on 2026-09-10. "Used as delivered" records my
+use of the implementation, not an invented independent approval of each rule.
+The technical explanations describe the delivered behavior. They do not imply
+that I originally specified those choices or independently tested each edge case.
 
 | Decision | Accepted / changed / rejected | Participant rationale / change |
 |---|---|---|
-| Cover five Silver checks and four Gold outputs | Pending | Pending |
-| Treat 460 injections as 490 directly flagged rows | Pending | Pending |
-| Reject all duplicate members rather than keep one | Pending | Pending |
-| Require valid dimensions and Completed status for Gold | Pending | Pending |
-| Segment priority and 1000.00 threshold | Pending | Pending |
-| Local Parquet proof vs unexecuted cloud Delta path | Pending | Pending |
-| Source/model assumptions and currency interpretation | Pending | Pending |
-| Generated code, tests, dashboard, and documentation | Pending | Pending |
+| Cover five Silver checks and four Gold outputs | Used as delivered | I ran the implementation covering all named checks/outputs, rather than only the inconsistent summary counts; AI selected this scope |
+| Treat 460 injections as 490 directly flagged rows | Used as delivered | I retain the distinction: replacing 30 IDs creates duplicate pairs whose 60 members fail uniqueness; the 490 total comes from local validation, not a cloud measurement I supplied |
+| Reject all duplicate members rather than keep one | Used as delivered | The pipeline flags every repeated key member and retains the raw rows; I have not documented a separate deduplication-policy review |
+| Require valid dimensions and Completed status for Gold | Used as delivered | Gold excludes invalid joins and non-Completed orders; I have not supplied independent stakeholder approval of this business definition |
+| Segment priority and 1000.00 threshold | Used as delivered | The exercise implementation applies High-Value first, then Repeat, One-Time and Inactive; the threshold is configurable and is not claimed to be a production policy |
+| Local Parquet measurements vs cloud Delta run | Ran the cloud target | I confirmed the Databricks end-to-end run and supplied published-dashboard screenshots; assistant-run local tests and totals remain separately attributed |
+| Source/model assumptions and currency interpretation | Used the synthetic exercise scope | I am not claiming currency conversion, tax/refund handling or complete historical lifetime value from this source snapshot |
+| Generated code, tests, dashboard, and documentation | Used AI output; configured and executed the cloud project | I changed the catalog to `workspace`, reported the dashboard error, supplied screenshots and authorized documentation/cleanup; I do not claim a line-by-line independent code review |
+| Proposed corrections to the cloud visualizations | Accepted the existing divergence instead | I explicitly accepted more than ten displayed products, category rather than segment donut grouping, and nonnumeric bin order; I did not give a further technical rationale |
 
-No approval is inferred from the user's authorization to create a project.
+No additional participant rejection is invented to fill a category. The
+activity-specific [prompt records](ai-prompts/session-history.md) use the same
+attribution; this draft still needs my final wording approval before submission.

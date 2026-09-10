@@ -31,6 +31,6 @@ Gold row counts were 500 products, 9,930 customers, 419 trend rows, and 4 segmen
 
 | Participant review field | Value |
 |---|---|
-| Accepted / changed / rejected | Pending |
-| Rationale and any participant modifications | Pending |
-| Independent participant validation | Pending |
+| Accepted / changed / rejected | I used the delivered Gold outputs through the `workspace.medallion_gold` target; no separate aggregation-rule modification or rejection was recorded |
+| Rationale and any participant modifications | The outputs support product/customer revenue, trends and segments; filtering to Completed orders and valid dimensions was defined in the AI-generated implementation |
+| Independent participant validation | I ran the cloud pipeline and built dashboard charts; hand-calculated fixtures and the 11,720,321.50 revenue oracle are assistant-run local evidence, not my independently measured cloud totals |

@@ -32,6 +32,6 @@ Earlier passing evidence alone was not treated as proof of the fix.
 
 | Participant review field | Value |
 |---|---|
-| Accepted / changed / rejected | Pending |
-| Rationale and any participant modifications | Pending |
-| Independent participant validation | Pending |
+| Accepted / changed / rejected | I used the delivered ingestion and configured the setup SQL for the `workspace` catalog |
+| Rationale and any participant modifications | The catalog change aligned the setup with my Databricks target; raw preservation and CSV parsing corrections were assistant implementation choices |
+| Independent participant validation | I ran the project successfully on Databricks; quote/newline/header edge-case coverage comes from the preserved assistant-run tests |

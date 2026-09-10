@@ -1,76 +1,80 @@
-# AI usage summary
+# My AI usage summary
 
-**Status: implementation record, not final participant sign-off.**
+First-person draft prepared with AI at my request on 2026-09-10. This describes
+recorded work; it is not a claim of unrecorded independent review or final form
+submission.
 
-## Actual inputs and tool
+## My contribution
 
-The user supplied an AI Capability Exercise guide, requested
-“Create a implementation Plan, Build this solution in a separate project”,
-and approved the standalone path. The primary tool was an AI assistant using
-the Copilot SDK in VS Code. Cursor was not used; the equivalent project artifacts
-are explained in [tool workflow](tool-workflow.md).
+I supplied the exercise brief, requested an implementation plan and a separate
+project, and approved the project location. I configured the Databricks catalog
+as `workspace`, ran the project end to end, created and published the dashboard,
+and supplied four screenshots. I reported the dashboard-query placeholder issue
+and later confirmed successful execution.
 
-## Work performed with AI
+I accepted the disclosed differences between my cloud dashboard and the brief:
+more than ten products, a category-revenue donut instead of customer segmentation,
+and nonnumeric histogram-bin ordering. I asked for these to be documented rather
+than corrected. I also requested repository cleanup and first-person submission
+drafts based on the actual work.
 
-| Responsibility | Actual AI contribution |
-|---|---|
-| Coordinating assistant | Plan/contracts, package/CLI/runtime, Bronze, Silver, storage, orchestration, core tests, environment debugging |
-| Generator agent | Deterministic generator, explicit fault injection/manifests, full source files, generation tests/notes |
-| Gold/dashboard agent | SQL aggregations, eligible-sales contract, local dashboard and cloud dashboard instructions, targeted tests |
-| Documentation agent | Root technical/workflow artifacts, prompt summaries, evidence boundaries, participant-pending fields |
+## AI contribution
 
-Delegated prompts were assistant-authored, not additional user requests.
-Their summaries and known outcomes are in [session history](ai-prompts/session-history.md)
-and the layer-specific prompt files. No unrecorded past prompts, commits,
-participant reviews, or cloud execution have been fabricated.
+The coordinating assistant created the plan, package/runtime setup, Bronze and
+Silver code, storage/orchestration and core tests. Delegated agents implemented
+the generator, Gold SQL, local dashboard and documentation. The assistant ran
+local tests, reconciled persisted outputs, checked the browser dashboard, and
+used a specialist to review the code.
 
-## Validation and limitations
+The first implementation needed corrections to source segment values, Gold
+fields/chart types, CSV quoting and Unicode whitespace handling. These were
+assistant-originated findings and fixes, not bugs I claim to have independently
+found. The prompt records preserve that distinction.
 
-The final post-fix unified local suite passed **67 tests in 28.97s**, with zero
-failures/errors/skips in the inspected JUnit report. It includes corrected
-generation, core checks, Gold/dashboard tests, independent exact-column and
-strict-threshold acceptance, and persisted Spark fixture/rerun validation.
-Earlier focused results and real failures remain recorded in
-[test strategy](test-strategy.md) and [debugging notes](debugging-notes.md);
-overlapping test counts are not added together.
+## Decisions and iteration
 
-The final full-default CLI run `2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7` succeeded
-with **30,077 eligible orders**,
-**11,720,321.50 reconciled revenue**, **490 direct failed source rows**, and
-pipeline/dashboard `SUCCESS`. The manifest, 18-row quality report, and HTML
-persisted; an independent CSV oracle matched count/revenue. Actual browser
-visual/filter/reset checks passed, including the histogram, segmentation donut,
-Books/product filters, weekly periods, and customer coverage. Exact observations
-are recorded in test strategy. These are local results, not cloud execution.
+I used the delivered five-check/four-output design for the exercise; the detailed
+rule choices originated with AI. My specific recorded changes/decisions include
+the workspace catalog configuration and accepting the cloud visualization
+differences. Where no independent technical review or participant rejection was
+recorded, the documentation says so instead of manufacturing one.
 
-Specialist review subsequently found two verified bugs: incompatible CSV quote
-escaping and incomplete Unicode whitespace handling. The coordinator corrected
-Bronze escaping and Silver normalization/email matching while preserving raw
-evidence, and added regressions, including valid quoted newlines. The final **67-test**
-suite, full-default rerun, and wheel rebuild succeeded. Earlier 63-test results
-and the interim 66-test expectation are historical. The targeted specialist
-recheck confirmed both findings resolved. The screenshot retains the earlier
-verified run ID; the final run has the same business figures.
+During dashboard setup, AI verified my table mapping locally and in the wheel,
+added resource-path/missing-key diagnostics, documented package refresh and
+produced rendered SQL. A stale or modified cloud resource was a possible cause,
+not a root cause observed in my workspace. I did not record the exact remediation.
 
-The assistant resolved count ambiguities, selected all-member duplicate handling,
-explicit Gold eligibility, deterministic dates/thresholds, and separate local/
-cloud storage. These are implementation decisions; the user's path approval
-does not constitute acceptance of every technical choice.
+## Validation evidence
 
-An actual assistant-level rejection is recorded: the coordinator rejected a
-sibling's suggestion to weaken Silver's source enum and corrected the generator
-instead. This must not be attributed to the participant.
+- The assistant's historical full suite passed 67 tests.
+- A subsequent Gold/dashboard suite passed 25 tests after diagnostic changes;
+  this overlaps the full suite and is not an additional 25 distinct end-to-end tests.
+- The assistant's local full-size run retained 490 directly failing rows and
+  reconciled 30,077 eligible orders to revenue of 11,720,321.50.
+- I confirmed end-to-end execution in Databricks and supplied screenshots showing
+  an actual published dashboard.
 
-## Required participant completion
+Local counts, revenue and run IDs remain labeled local. I have not supplied a
+cloud metric export, exact notebook run ID, engine/runtime version or evidence
+of external reviewer access. My recorded three-minute execution duration is not
+the Databricks Runtime version or a measure of total exercise effort.
 
-- Identity/role and actual involvement: **Pending**.
-- Accepted/changed/rejected AI suggestions and reasons: **Pending**.
-- Independent code/results review: **Pending**.
-- Personal reflection and any time/effort accounting: **Pending**.
-- Databricks run/dashboard evidence and actual permissions: **Not supplied**.
-- Final submission approval: **Pending**.
+## Responsible use and limitations
 
-No percentage of AI authorship, productivity gain, saved time, or participant
-learning is claimed without evidence. Specialist review found the two issues
-described above; regressions passed and the specialist confirmed both resolved.
-No git commits are claimed.
+I used synthetic data and did not need to share real customer records. I keep AI
+task summaries separate from my prompts and the assistant's test work separate
+from my execution. I do not claim an AI-authorship percentage, time saved or
+productivity improvement without measurements.
+
+The project is an exercise implementation with documented full-refresh limits,
+not a production-readiness certification. My acceptance of dashboard differences
+is not an assertion that the assessor has accepted those differences.
+
+## Handoff
+
+The source, tests, seed data, lockfile, prompt records and compact evidence remain
+in the repository. Reproducible local environments/builds/outputs were removed.
+My identity and role come from the candidate details I supplied. First-person
+reflection, decision records and [form-answer drafts](submission-answers.md) are
+prepared; I still need to approve the wording and complete account-bound actions
+listed in [the submission checklist](submission-checklist.md).

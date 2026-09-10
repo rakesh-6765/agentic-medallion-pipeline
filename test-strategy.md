@@ -1,5 +1,12 @@
 # Test strategy and evidence
 
+**Submission update (2026-09-10):** the participant confirmed end-to-end
+Databricks execution and dashboard creation. Detailed cloud run evidence remains
+to be attached. After the SQL-template diagnostic changes, the focused
+Gold/dashboard suite passed **25 tests in 16.04s**; its
+[JUnit report](evidence/dashboard-tests-2026-09-10.xml) is preserved alongside the
+historical full-suite report. Test counts overlap and must not be added together.
+
 **Final post-fix status:** **67 tests passed in 28.97s** after the two verified
 CSV/Unicode review fixes, including a valid quoted-newline regression. Final run
 `2ce291e3-e2d0-41bf-8f3b-271cfdfc92f7` and wheel rebuild succeeded. JUnit and
@@ -87,13 +94,14 @@ execution or an independent reviewer.
 | Final post-review suite | **67 passed in 28.97s** | Includes doubled-quote/valid quoted-newline CSV and Unicode whitespace/raw/email regressions; zero failures/errors/skips |
 | Full-size local pipeline | **SUCCESS**, including dashboard status | `.venv/bin/medallion run`; persisted manifest/report/HTML inspected; results below |
 | Browser/dashboard interaction | **PASS**, coordinator-verified on actual HTML | Five charts, actual SVG histogram/donut, category/product filters, Monday-start weekly periods, totals, and reset |
-| Databricks notebook / dashboard | **Not executed / no evidence supplied** | Requires participant workspace and permissions |
+| SQL-template follow-up, 2026-09-10 | **25 passed in 16.04s** | Gold/dashboard tests including exact workspace mapping and diagnostic mismatch regressions |
+| Databricks notebook / dashboard | **Participant confirmed complete on 2026-09-10** | Assistant did not observe the workspace; actual run/export details remain to be attached |
 
 Detailed generator hashes and the independent generator segment calculation are
 in [generation notes](src/data_generation/DATA_GENERATION_NOTES.md). That Python
 calculation is not mislabeled as a Spark result.
 
-The final [JUnit report](artifacts/test-results.xml) was inspected: **67 tests**,
+The preserved [full-suite JUnit report](evidence/local-tests-2026-09-09.xml) was inspected: **67 tests**,
 zero errors/failures/skips, **28.971 seconds** (28.97s in the console summary).
 The earlier inspected report had 63 tests/26.597s and has been replaced. Focused
 runs overlap the suite; their counts must not be added together.
@@ -106,8 +114,9 @@ completed full-default Spark run: **30,077 eligible Completed orders** and
 
 Command: `.venv/bin/medallion run`, reported successful by the coordinator.
 The documentation agent independently inspected
-[`artifacts/local/run_manifest.json`](artifacts/local/run_manifest.json),
-[`quality_report.json`](artifacts/local/quality_report.json), and the persisted
+the run manifest (now preserved as
+[`evidence/local-run-manifest.json`](evidence/local-run-manifest.json)),
+[`quality_report.json`](evidence/local-quality-report.json), and the persisted
 HTML file's presence/size.
 
 | Item | Observed result |
@@ -122,7 +131,7 @@ HTML file's presence/size.
 | Order eligibility | 100,000 = 420 direct quality failures + 537 dimension exclusions + 68,966 non-Completed exclusions + **30,077 eligible orders** |
 | Revenue reconciliation | **11,720,321.50** in products, customers, segments, and each separate daily/weekly grain |
 | Independent reference | Standard-library CSV oracle agrees with eligible count and exact revenue |
-| Dashboard | `artifacts/local/dashboard.html` persisted with dashboard SUCCESS; five charts; earlier actual browser visual/filter checks passed |
+| Dashboard | Local HTML was persisted with dashboard SUCCESS; five charts and actual browser checks passed; screenshot retained, reproducible HTML removed during cleanup |
 
 The timestamps above delimit the pipeline; local rendering/export occurs
 afterward and is not assigned an invented duration.
@@ -162,9 +171,12 @@ No dashboard publish/import or Databricks query is inferred.
   final suite passed; targeted specialist recheck **confirmed both resolved**.
 - Post-review full suite/default run and final wheel: **Verified successful**.
 - Screenshot: **Actual earlier-run evidence retained**, with its run identity explicit.
-- Cloud workspace/runtime/warehouse, run ID and dashboard URL/export: **Pending**.
+- Cloud execution/dashboard creation: **Participant-confirmed complete**.
+- Cloud runtime/run ID and dashboard evidence/reviewer access: **To attach/confirm**.
 
 The contract and specialist corrections are covered by the final passing suite
 and successful full-default rerun. Earlier actual browser results are preserved;
 the targeted review found no significant issues in the corrected code.
-Cloud execution remains unverified.
+The cloud completion report is attributed to the participant, not to local tests.
+Local environments and duplicate outputs were removed during submission cleanup;
+the compact [evidence files](evidence/README.md) and all test source remain.

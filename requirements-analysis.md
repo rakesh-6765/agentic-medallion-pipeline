@@ -12,8 +12,9 @@ The user requested exactly:
 
 > Create a implementation Plan, Build this solution in a separate project
 
-The user subsequently approved the proposed standalone path. No narrower
-technical choices or participant review conclusions were supplied.
+The user subsequently approved the proposed standalone path. On 2026-09-10,
+the participant confirmed end-to-end Databricks execution and dashboard creation.
+Detailed technical review decisions still belong to the participant.
 
 ## Traceability
 
@@ -28,7 +29,7 @@ technical choices or participant review conclusions were supplied.
 | Dashboard | `src/dashboard/` | Required top-10 product bar, customer-revenue histogram, segmentation pie; additional category/trend views with honest filter scope |
 | Repeatable execution | CLI, notebook, storage, manifests | Persisted layers reconcile; safe full refresh; clear failure status |
 | Validation and AI artifacts | `tests/`, root docs, `ai-prompts/` | Actual evidence separated from planned work and participant judgments |
-| Databricks delivery | Notebook, setup SQL, dashboard guide | Actual workspace execution/publish evidence still required |
+| Databricks delivery | Notebook, setup SQL, dashboard guide | Run/dashboard creation confirmed by participant; attach actual run evidence and verify publishing/reviewer access |
 
 The source layout deliberately shares one Bronze ingestion module across three
 tables and public Silver check helpers across all five checks, rather than
@@ -39,14 +40,14 @@ functional coverage; see [design notes](design-notes.md).
 
 | Ambiguity | Implementation decision | Participant disposition |
 |---|---|---|
-| Summary count conflicts with named Silver checks | Implement all **five** named checks | Pending |
-| Summary count conflicts with named Gold aggregations | Implement all **four** named outputs | Pending |
-| Approximate 700 defects vs enumerated faults | Use **460 injected events**; explain **490 flagged rows** | Pending |
-| Duplicate rows vs fixed source sizes | Replace IDs in existing rows; fail every group member | Pending |
-| Revenue eligibility | `Completed` order and `PASS` order/customer/product | Pending |
-| Segment overlap/boundaries | High-Value ≥1000 first; Repeat ≥2; One-Time 1; Inactive 0 | Pending |
-| Cloud access unavailable | Validate locally with Parquet; provide unexecuted managed-Delta path | Pending |
-| Cursor-specific workflow | Copilot-equivalent documents, not invented Cursor usage | Pending |
+| Summary count conflicts with named Silver checks | Implement all **five** named checks | I used the delivered implementation covering every named check |
+| Summary count conflicts with named Gold aggregations | Implement all **four** named outputs | I used the delivered four-output pipeline |
+| Approximate 700 defects vs enumerated faults | Use **460 injected events**; explain **490 flagged rows** | I report the enumerated faults separately from the locally verified failed-row count |
+| Duplicate rows vs fixed source sizes | Replace IDs in existing rows; fail every group member | I used this policy as delivered; no separate policy review is claimed |
+| Revenue eligibility | `Completed` order and `PASS` order/customer/product | I used the exercise definition, not a claimed production stakeholder approval |
+| Segment overlap/boundaries | High-Value ≥1000 first; Repeat ≥2; One-Time 1; Inactive 0 | I used the configurable default; AI defined the priority and threshold |
+| Cloud access unavailable to assistant | Validate locally with Parquet; participant subsequently ran the managed-Delta path successfully | I ran the project on Databricks and supplied dashboard screenshots; local metrics remain local |
+| Cursor-specific workflow | Copilot-equivalent documents, not invented Cursor usage | I used Copilot; organizer approval of the alternative is not recorded |
 
 ## Assumptions and exclusions
 
@@ -63,6 +64,11 @@ functional coverage; see [design notes](design-notes.md).
 - Intentional quality defects fail thresholds without terminating the exercise;
   input, environment, persistence, and reconciliation errors must remain visible.
 - Missing workspace credentials, permissions, or infrastructure do not authorize
-  an invented cloud run. No git commit is part of the approved scope.
+  an invented cloud run. Participant-reported cloud completion is distinguished
+  from local measurements. This finalization makes no new commits.
 
-Participant review of these assumptions remains pending.
+The first-person dispositions are drafts requested by the participant on
+2026-09-10. They describe use and recorded actions without claiming an independent
+review of every assumption. See [the decision record](code-review-notes.md) for
+the explicit dashboard-divergence acceptance and [submission answers](submission-answers.md)
+for the proposed form wording.

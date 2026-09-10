@@ -1,27 +1,27 @@
 -- REVIEW-AND-REPLACE TEMPLATE, not an automatically executed migration.
--- Replace every REPLACE_WITH_CATALOG with your EXISTING, authorized Unity Catalog
--- catalog. Defaults match notebooks/run_pipeline.py with prefix='medallion'.
+-- The participant configured the existing 'workspace' Unity Catalog catalog.
+-- Review/replace it if needed. Defaults match run_pipeline.py prefix='medallion'.
 -- If changing prefix, rename the medallion_bronze/silver/gold schemas consistently.
 -- Choose dedicated schema names if these schemas already contain unrelated data.
 -- No DROP, TRUNCATE, GRANT, credential, external LOCATION, or DBFS-root dependency.
 
-CREATE SCHEMA IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_source`
+CREATE SCHEMA IF NOT EXISTS `workspace`.`medallion_source`
 COMMENT 'Medallion source-file volumes';
-CREATE SCHEMA IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_bronze`
+CREATE SCHEMA IF NOT EXISTS `workspace`.`medallion_bronze`
 COMMENT 'Full-refresh raw lexical source snapshots with ingestion metadata';
-CREATE SCHEMA IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_silver`
+CREATE SCHEMA IF NOT EXISTS `workspace`.`medallion_silver`
 COMMENT 'Row-preserving typed snapshots with deterministic quality flags';
-CREATE SCHEMA IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`
+CREATE SCHEMA IF NOT EXISTS `workspace`.`medallion_gold`
 COMMENT 'Quality-aware Completed-order analytics';
 
-CREATE VOLUME IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_source`.`raw`
+CREATE VOLUME IF NOT EXISTS `workspace`.`medallion_source`.`raw`
 COMMENT 'Synthetic CSV ingestion inputs and generation manifest';
 
 -- Gold contracts. The runner creates Bronze/Silver from the shared source
 -- contract and writes all layer tables as managed Delta, without LOCATION.
 -- These IF NOT EXISTS statements do not alter incompatible existing schemas;
 -- inspect them before any intentional full-refresh overwrite.
-CREATE TABLE IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`.`sales_by_product` (
+CREATE TABLE IF NOT EXISTS `workspace`.`medallion_gold`.`sales_by_product` (
     product_id INT,
     product_name STRING,
     category STRING,
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`.`sales_by_pro
 ) USING DELTA
 COMMENT 'Unique valid products including zero-sales products; eligible orders only';
 
-CREATE TABLE IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`.`revenue_by_customer` (
+CREATE TABLE IF NOT EXISTS `workspace`.`medallion_gold`.`revenue_by_customer` (
     customer_id INT,
     customer_name STRING,
     customer_segment STRING,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`.`revenue_by_c
 ) USING DELTA
 COMMENT 'Unique valid customers with source segment; lifetime value covers only the supplied snapshot';
 
-CREATE TABLE IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`.`daily_weekly_trends` (
+CREATE TABLE IF NOT EXISTS `workspace`.`medallion_gold`.`daily_weekly_trends` (
     period_type STRING,
     period_start DATE,
     total_orders BIGINT,
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`.`daily_weekly
 ) USING DELTA
 COMMENT 'Separate daily and Monday-start weekly grains; never sum both grains';
 
-CREATE TABLE IF NOT EXISTS `REPLACE_WITH_CATALOG`.`medallion_gold`.`customer_segmentation` (
+CREATE TABLE IF NOT EXISTS `workspace`.`medallion_gold`.`customer_segmentation` (
     segment_type STRING,
     segment_order INT,
     customer_count BIGINT,

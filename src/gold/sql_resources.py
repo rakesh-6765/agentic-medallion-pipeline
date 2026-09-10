@@ -40,10 +40,18 @@ def render_sql(
     decimal_values = decimals or {}
     if identifiers.keys() & decimal_values.keys():
         raise ValueError("A replacement cannot be both identifier and decimal")
-    text = files(package).joinpath(resource).read_text(encoding="utf-8")
+    resource_path = files(package).joinpath(resource)
+    text = resource_path.read_text(encoding="utf-8")
     names = set(_TOKEN.findall(text))
-    if names != identifiers.keys() | decimal_values.keys():
-        raise ValueError("SQL replacement names must match placeholders exactly")
+    supplied = identifiers.keys() | decimal_values.keys()
+    if names != supplied:
+        raise ValueError(
+            f"SQL replacement names must match placeholders exactly in {resource_path}. "
+            f"Missing replacements: {sorted(names - supplied)}; "
+            f"unexpected replacements: {sorted(supplied - names)}. "
+            "Check the loaded SQL template and installed package; after updating "
+            "a Databricks notebook installation, restart Python before importing again."
+        )
     replacements = {}
     for name, identifier in identifiers.items():
         parts = identifier.split(".")

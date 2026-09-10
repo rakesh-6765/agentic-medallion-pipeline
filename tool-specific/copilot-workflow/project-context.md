@@ -10,7 +10,9 @@ Standalone root:
 `/Users/rakesh-maf/Documents/repos/databricks-medallion-pipeline`.
 Do not integrate it into the neighboring agent repository. The user approved
 this location after requesting a plan and complete separate solution.
-Participant identity/role and Databricks credentials were not supplied.
+Participant identity and role were subsequently supplied in
+[candidate information](../../candidate-info.md). Databricks credentials were
+not supplied and are not required in repository documentation.
 
 ## System shape
 
@@ -27,5 +29,7 @@ Participant identity/role and Databricks credentials were not supplied.
 
 Inspect/test actual behavior before claiming success. Keep agent-generated task
 summaries distinct from user prompts. Participant decisions/reflections and cloud
-execution remain pending until provided or actually performed with authorization.
+execution must be attributed to their actual source. The participant confirmed
+successful Databricks execution/dashboard creation on 2026-09-10; cloud
+identifiers, exports and personal judgments are not inferred.
 Never infer a participant name from the filesystem path.
