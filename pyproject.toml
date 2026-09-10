@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "databricks-medallion-pipeline"
+version = "0.1.0"
+description = "Reproducible, quality-aware e-commerce medallion pipeline"
+requires-python = ">=3.11,<3.13"
+dependencies = []
+
+[project.optional-dependencies]
+local = ["pyspark>=4.0,<4.1", "install-jdk>=1.1,<2"]
+dev = ["pytest>=8.3,<9"]
+
+[project.scripts]
+medallion = "medallion.cli:main"
+
+[tool.setuptools]
+package-dir = {medallion = "src"}
+packages = [
+    "medallion",
+    "medallion.data_generation",
+    "medallion.bronze",
+    "medallion.silver",
+    "medallion.gold",
+    "medallion.dashboard",
+]
+
+[tool.setuptools.package-data]
+"medallion.gold" = ["*.sql"]
+"medallion.dashboard" = ["*.sql", "*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["integration: tests executing Spark transformations and persistence"]

@@ -1,0 +1,501 @@
+product_id,product_name,category,price,cost,stock_quantity,reorder_level
+1,Wireless Headphones 0001,Electronics,214.52,100.82,379,22
+2,Coffee Grinder 0002,Home & Kitchen,85.24,46.02,377,11
+3,Cotton Shirt 0003,Clothing,226.74,167.78,302,32
+4,Yoga Mat 0004,Sports & Outdoors,15.41,6.31,111,19
+5,Skin Care Set 0005,Beauty,170.59,133.06,287,17
+6,Sketchbook 0006,Books,239.62,177.31,112,33
+7,Wireless Headphones 0007,Electronics,198.09,112.91,388,56
+8,Desk Lamp 0008,Home & Kitchen,57.31,38.39,142,14
+9,Cotton Shirt 0009,Clothing,75.55,46.08,47,29
+10,Water Bottle 0010,Sports & Outdoors,36.69,22.74,309,21
+11,Hair Brush 0011,Beauty,269.47,113.17,274,12
+12,Garden Guide 0012,Books,129.03,58.06,424,45
+13,Portable Speaker 0013,Electronics,207.67,130.83,360,9
+14,Desk Lamp 0014,Home & Kitchen,20.01,10.80,40,59
+15,Wool Scarf 0015,Clothing,81.28,37.38,142,34
+16,Trail Backpack 0016,Sports & Outdoors,213.30,134.37,189,27
+17,Skin Care Set 0017,Beauty,73.65,41.98,311,45
+18,Cookbook 0018,Books,61.07,45.19,83,34
+19,Portable Speaker 0019,Electronics,129.33,73.71,350,25
+20,Coffee Grinder 0020,Home & Kitchen,281.18,120.90,420,7
+21,Wool Scarf 0021,Clothing,268.79,161.27,137,9
+22,Water Bottle 0022,Sports & Outdoors,74.13,56.33,108,46
+23,Hair Brush 0023,Beauty,168.58,109.57,73,21
+24,Garden Guide 0024,Books,50.75,27.91,382,42
+25,USB Hub 0025,Electronics,145.38,111.94,185,19
+26,Linen Set 0026,Home & Kitchen,50.32,36.23,46,53
+27,Canvas Jacket 0027,Clothing,20.43,9.60,321,15
+28,Yoga Mat 0028,Sports & Outdoors,264.54,177.24,197,29
+29,Body Lotion 0029,Beauty,200.26,138.17,497,40
+30,Travel Journal 0030,Books,287.06,114.82,349,39
+31,Desk Charger 0031,Electronics,251.04,143.09,57,23
+32,Linen Set 0032,Home & Kitchen,147.46,73.73,1,51
+33,Canvas Jacket 0033,Clothing,291.99,163.51,259,11
+34,Water Bottle 0034,Sports & Outdoors,290.25,232.20,430,45
+35,Travel Kit 0035,Beauty,171.35,133.65,78,28
+36,Travel Journal 0036,Books,254.85,127.42,306,25
+37,Wireless Headphones 0037,Electronics,165.10,67.69,475,28
+38,Coffee Grinder 0038,Home & Kitchen,292.93,172.82,29,20
+39,Cotton Shirt 0039,Clothing,292.70,222.45,43,51
+40,Trail Backpack 0040,Sports & Outdoors,164.24,72.26,65,47
+41,Travel Kit 0041,Beauty,160.74,120.55,135,38
+42,Sketchbook 0042,Books,290.87,226.87,493,18
+43,Desk Charger 0043,Electronics,181.71,94.48,204,47
+44,Linen Set 0044,Home & Kitchen,217.95,137.30,460,38
+45,Canvas Jacket 0045,Clothing,152.94,71.88,115,9
+46,Trail Backpack 0046,Sports & Outdoors,115.78,47.46,301,19
+47,Skin Care Set 0047,Beauty,7.35,3.23,117,9
+48,Travel Journal 0048,Books,15.29,9.32,263,20
+49,Portable Speaker 0049,Electronics,96.25,68.33,276,13
+50,Linen Set 0050,Home & Kitchen,242.02,183.93,124,55
+51,Canvas Jacket 0051,Clothing,159.98,105.58,48,11
+52,Water Bottle 0052,Sports & Outdoors,220.93,148.02,216,31
+53,Skin Care Set 0053,Beauty,158.03,67.95,31,30
+54,Travel Journal 0054,Books,243.62,148.60,127,17
+55,USB Hub 0055,Electronics,67.32,49.81,71,32
+56,Linen Set 0056,Home & Kitchen,65.12,37.11,127,60
+57,Cotton Shirt 0057,Clothing,29.70,20.19,25,46
+58,Yoga Mat 0058,Sports & Outdoors,182.13,72.85,474,53
+59,Travel Kit 0059,Beauty,283.10,155.70,208,36
+60,Sketchbook 0060,Books,162.73,86.24,462,8
+61,Wireless Headphones 0061,Electronics,58.94,37.72,199,21
+62,Desk Lamp 0062,Home & Kitchen,261.92,180.72,216,49
+63,Wool Scarf 0063,Clothing,244.37,183.27,79,17
+64,Yoga Mat 0064,Sports & Outdoors,102.22,54.17,296,52
+65,Body Lotion 0065,Beauty,182.66,78.54,29,8
+66,Cookbook 0066,Books,196.42,137.49,29,37
+67,Wireless Headphones 0067,Electronics,31.25,15.93,304,9
+68,Linen Set 0068,Home & Kitchen,226.25,124.43,61,41
+69,Cotton Shirt 0069,Clothing,85.67,65.96,317,10
+70,Water Bottle 0070,Sports & Outdoors,142.37,109.62,478,21
+71,Travel Kit 0071,Beauty,71.93,43.15,135,30
+72,Sketchbook 0072,Books,47.88,28.24,161,53
+73,USB Hub 0073,Electronics,28.77,11.50,318,41
+74,Coffee Grinder 0074,Home & Kitchen,37.76,16.61,259,21
+75,Cotton Shirt 0075,Clothing,48.40,30.00,450,20
+76,Trail Backpack 0076,Sports & Outdoors,126.08,73.12,224,58
+77,Skin Care Set 0077,Beauty,183.00,107.97,341,57
+78,Travel Journal 0078,Books,186.73,110.17,480,13
+79,Wireless Headphones 0079,Electronics,91.66,43.08,380,40
+80,Desk Lamp 0080,Home & Kitchen,55.93,31.88,309,18
+81,Canvas Jacket 0081,Clothing,240.14,146.48,351,45
+82,Exercise Band 0082,Sports & Outdoors,284.48,159.30,128,59
+83,Hair Brush 0083,Beauty,21.64,9.73,424,22
+84,Garden Guide 0084,Books,19.44,7.77,394,13
+85,Portable Speaker 0085,Electronics,213.76,119.70,379,33
+86,Storage Basket 0086,Home & Kitchen,185.77,124.46,57,9
+87,Cotton Shirt 0087,Clothing,294.37,144.24,427,28
+88,Trail Backpack 0088,Sports & Outdoors,195.87,146.90,220,13
+89,Body Lotion 0089,Beauty,18.70,11.03,460,55
+90,Garden Guide 0090,Books,287.03,120.55,107,48
+91,Desk Charger 0091,Electronics,86.76,39.90,399,40
+92,Coffee Grinder 0092,Home & Kitchen,294.71,194.50,473,20
+93,Canvas Jacket 0093,Clothing,288.31,144.15,451,31
+94,Water Bottle 0094,Sports & Outdoors,13.12,6.69,400,31
+95,Body Lotion 0095,Beauty,267.87,147.32,81,55
+96,Sketchbook 0096,Books,234.79,108.00,446,7
+97,Portable Speaker 0097,Electronics,286.34,200.43,102,57
+98,Desk Lamp 0098,Home & Kitchen,155.83,96.61,420,55
+99,Canvas Jacket 0099,Clothing,290.51,156.87,12,47
+100,Water Bottle 0100,Sports & Outdoors,68.28,44.38,142,60
+101,Body Lotion 0101,Beauty,27.74,15.81,328,37
+102,Garden Guide 0102,Books,135.96,100.61,480,6
+103,Portable Speaker 0103,Electronics,42.79,23.96,297,21
+104,Linen Set 0104,Home & Kitchen,17.53,8.06,176,51
+105,Wool Scarf 0105,Clothing,262.69,157.61,310,37
+106,Trail Backpack 0106,Sports & Outdoors,42.89,27.44,130,7
+107,Skin Care Set 0107,Beauty,237.25,158.95,266,56
+108,Garden Guide 0108,Books,181.43,94.34,220,9
+109,Desk Charger 0109,Electronics,222.65,135.81,339,59
+110,Desk Lamp 0110,Home & Kitchen,45.83,27.03,341,31
+111,Running Socks 0111,Clothing,111.88,72.72,283,13
+112,Exercise Band 0112,Sports & Outdoors,67.86,44.78,346,52
+113,Body Lotion 0113,Beauty,62.02,48.99,207,40
+114,Garden Guide 0114,Books,278.19,111.27,146,18
+115,Desk Charger 0115,Electronics,145.86,112.31,238,33
+116,Linen Set 0116,Home & Kitchen,149.88,79.43,406,55
+117,Cotton Shirt 0117,Clothing,246.15,123.07,145,37
+118,Water Bottle 0118,Sports & Outdoors,222.53,178.02,47,57
+119,Body Lotion 0119,Beauty,251.13,138.12,115,56
+120,Travel Journal 0120,Books,70.25,34.42,23,20
+121,Wireless Headphones 0121,Electronics,160.69,126.94,233,31
+122,Coffee Grinder 0122,Home & Kitchen,295.36,236.28,367,49
+123,Wool Scarf 0123,Clothing,130.82,92.88,124,14
+124,Yoga Mat 0124,Sports & Outdoors,219.97,87.98,398,32
+125,Hair Brush 0125,Beauty,76.70,39.11,25,40
+126,Sketchbook 0126,Books,86.65,40.72,68,56
+127,Desk Charger 0127,Electronics,157.25,114.79,486,53
+128,Linen Set 0128,Home & Kitchen,297.10,202.02,425,40
+129,Wool Scarf 0129,Clothing,151.11,75.55,230,21
+130,Water Bottle 0130,Sports & Outdoors,251.34,138.23,392,54
+131,Travel Kit 0131,Beauty,175.81,124.82,140,33
+132,Cookbook 0132,Books,30.38,17.62,139,26
+133,Wireless Headphones 0133,Electronics,109.76,81.22,70,14
+134,Coffee Grinder 0134,Home & Kitchen,80.77,51.69,361,18
+135,Wool Scarf 0135,Clothing,26.04,17.18,169,39
+136,Yoga Mat 0136,Sports & Outdoors,157.67,104.06,105,58
+137,Skin Care Set 0137,Beauty,142.67,91.30,438,53
+138,Sketchbook 0138,Books,193.64,123.92,3,27
+139,USB Hub 0139,Electronics,102.84,65.81,275,52
+140,Coffee Grinder 0140,Home & Kitchen,245.72,181.83,249,19
+141,Wool Scarf 0141,Clothing,94.43,63.26,14,29
+142,Trail Backpack 0142,Sports & Outdoors,115.14,74.84,430,34
+143,Skin Care Set 0143,Beauty,46.82,36.98,464,30
+144,Travel Journal 0144,Books,198.95,151.20,42,46
+145,USB Hub 0145,Electronics,145.44,69.81,93,8
+146,Desk Lamp 0146,Home & Kitchen,90.24,57.75,108,34
+147,Wool Scarf 0147,Clothing,112.10,68.38,142,53
+148,Water Bottle 0148,Sports & Outdoors,277.60,183.21,427,10
+149,Skin Care Set 0149,Beauty,159.11,65.23,487,27
+150,Travel Journal 0150,Books,78.47,34.52,386,6
+151,Wireless Headphones 0151,Electronics,86.02,44.73,318,14
+152,Linen Set 0152,Home & Kitchen,83.16,39.91,342,12
+153,Wool Scarf 0153,Clothing,189.80,100.59,358,21
+154,Trail Backpack 0154,Sports & Outdoors,256.29,161.46,310,43
+155,Travel Kit 0155,Beauty,250.08,117.53,493,24
+156,Travel Journal 0156,Books,40.42,31.12,475,24
+157,USB Hub 0157,Electronics,193.67,123.94,482,50
+158,Coffee Grinder 0158,Home & Kitchen,69.98,30.79,52,49
+159,Cotton Shirt 0159,Clothing,258.12,152.29,407,41
+160,Water Bottle 0160,Sports & Outdoors,261.45,109.80,272,32
+161,Skin Care Set 0161,Beauty,221.76,139.70,259,46
+162,Sketchbook 0162,Books,116.81,46.72,421,36
+163,Desk Charger 0163,Electronics,39.58,26.51,325,58
+164,Linen Set 0164,Home & Kitchen,155.64,76.26,90,51
+165,Wool Scarf 0165,Clothing,175.96,100.29,238,32
+166,Water Bottle 0166,Sports & Outdoors,275.57,212.18,165,59
+167,Body Lotion 0167,Beauty,85.44,38.44,451,33
+168,Sketchbook 0168,Books,84.90,58.58,172,6
+169,Portable Speaker 0169,Electronics,166.97,100.18,249,18
+170,Desk Lamp 0170,Home & Kitchen,121.26,67.90,143,43
+171,Cotton Shirt 0171,Clothing,234.76,133.81,264,17
+172,Exercise Band 0172,Sports & Outdoors,33.05,18.17,250,40
+173,Hair Brush 0173,Beauty,253.43,139.38,330,50
+174,Travel Journal 0174,Books,165.83,112.76,47,23
+175,Portable Speaker 0175,Electronics,77.61,50.44,156,47
+176,Linen Set 0176,Home & Kitchen,195.56,123.20,283,38
+177,Running Socks 0177,Clothing,117.64,78.81,180,49
+178,Water Bottle 0178,Sports & Outdoors,153.68,87.59,128,19
+179,Body Lotion 0179,Beauty,44.53,23.15,61,52
+180,Cookbook 0180,Books,180.59,92.10,110,52
+181,Desk Charger 0181,Electronics,163.66,93.28,51,58
+182,Coffee Grinder 0182,Home & Kitchen,68.60,39.78,184,16
+183,Canvas Jacket 0183,Clothing,104.04,41.61,140,7
+184,Water Bottle 0184,Sports & Outdoors,22.86,17.14,357,13
+185,Skin Care Set 0185,Beauty,214.01,151.94,446,5
+186,Sketchbook 0186,Books,193.10,111.99,245,33
+187,Wireless Headphones 0187,Electronics,116.64,59.48,129,60
+188,Storage Basket 0188,Home & Kitchen,161.54,75.92,205,36
+189,Cotton Shirt 0189,Clothing,29.27,22.24,77,14
+190,Water Bottle 0190,Sports & Outdoors,270.79,205.80,43,20
+191,Hair Brush 0191,Beauty,43.81,32.85,310,43
+192,Cookbook 0192,Books,264.10,208.63,397,38
+193,USB Hub 0193,Electronics,129.64,88.15,152,60
+194,Desk Lamp 0194,Home & Kitchen,197.84,132.55,291,44
+195,Cotton Shirt 0195,Clothing,24.73,19.53,485,53
+196,Trail Backpack 0196,Sports & Outdoors,73.08,58.46,135,47
+197,Travel Kit 0197,Beauty,31.60,15.80,88,40
+198,Travel Journal 0198,Books,29.59,14.79,209,33
+199,USB Hub 0199,Electronics,230.89,180.09,149,7
+200,Desk Lamp 0200,Home & Kitchen,80.85,46.89,359,60
+201,Canvas Jacket 0201,Clothing,153.77,67.65,473,21
+202,Trail Backpack 0202,Sports & Outdoors,263.15,210.52,217,12
+203,Travel Kit 0203,Beauty,183.44,99.05,465,22
+204,Travel Journal 0204,Books,275.87,135.17,30,15
+205,Desk Charger 0205,Electronics,264.72,156.18,224,12
+206,Linen Set 0206,Home & Kitchen,158.58,93.56,482,22
+207,Wool Scarf 0207,Clothing,168.99,125.05,224,10
+208,Exercise Band 0208,Sports & Outdoors,200.96,84.40,376,25
+209,Skin Care Set 0209,Beauty,202.82,113.57,46,19
+210,Travel Journal 0210,Books,225.95,171.72,391,48
+211,Wireless Headphones 0211,Electronics,274.16,156.27,390,53
+212,Linen Set 0212,Home & Kitchen,62.40,43.68,469,22
+213,Wool Scarf 0213,Clothing,64.47,49.64,325,57
+214,Exercise Band 0214,Sports & Outdoors,166.12,74.75,178,31
+215,Skin Care Set 0215,Beauty,114.21,68.52,439,15
+216,Sketchbook 0216,Books,113.07,74.62,147,47
+217,Wireless Headphones 0217,Electronics,136.22,102.16,232,10
+218,Desk Lamp 0218,Home & Kitchen,108.06,60.51,59,54
+219,Cotton Shirt 0219,Clothing,137.44,98.95,336,60
+220,Exercise Band 0220,Sports & Outdoors,182.79,126.12,27,17
+221,Hair Brush 0221,Beauty,174.88,110.17,320,33
+222,Cookbook 0222,Books,254.03,109.23,136,40
+223,USB Hub 0223,Electronics,47.93,27.79,450,49
+224,Storage Basket 0224,Home & Kitchen,163.83,77.00,498,45
+225,Canvas Jacket 0225,Clothing,204.51,112.48,159,40
+226,Exercise Band 0226,Sports & Outdoors,9.48,7.11,47,19
+227,Hair Brush 0227,Beauty,280.71,131.93,484,12
+228,Sketchbook 0228,Books,217.24,106.44,477,50
+229,Desk Charger 0229,Electronics,100.63,72.45,212,58
+230,Coffee Grinder 0230,Home & Kitchen,163.10,114.17,233,40
+231,Canvas Jacket 0231,Clothing,52.39,33.52,471,43
+232,Yoga Mat 0232,Sports & Outdoors,171.54,82.33,141,54
+233,Body Lotion 0233,Beauty,263.86,174.14,478,55
+234,Travel Journal 0234,Books,171.37,97.68,144,51
+235,USB Hub 0235,Electronics,102.83,79.17,443,14
+236,Linen Set 0236,Home & Kitchen,151.32,111.97,176,26
+237,Wool Scarf 0237,Clothing,185.85,137.52,233,25
+238,Trail Backpack 0238,Sports & Outdoors,289.95,150.77,292,29
+239,Skin Care Set 0239,Beauty,81.53,53.80,162,52
+240,Sketchbook 0240,Books,159.98,102.38,339,55
+241,USB Hub 0241,Electronics,273.94,134.23,493,7
+242,Desk Lamp 0242,Home & Kitchen,46.36,33.37,445,11
+243,Cotton Shirt 0243,Clothing,291.45,198.18,269,34
+244,Exercise Band 0244,Sports & Outdoors,10.02,4.90,445,46
+245,Hair Brush 0245,Beauty,55.58,24.45,400,21
+246,Sketchbook 0246,Books,115.93,91.58,332,10
+247,USB Hub 0247,Electronics,284.10,173.30,488,25
+248,Storage Basket 0248,Home & Kitchen,210.38,149.36,316,9
+249,Running Socks 0249,Clothing,81.92,65.53,116,52
+250,Yoga Mat 0250,Sports & Outdoors,34.61,23.18,389,45
+251,Hair Brush 0251,Beauty,235.65,108.39,85,49
+252,Travel Journal 0252,Books,103.12,42.27,166,55
+253,Desk Charger 0253,Electronics,23.38,13.56,191,32
+254,Linen Set 0254,Home & Kitchen,52.70,28.98,289,48
+255,Canvas Jacket 0255,Clothing,264.69,134.99,89,10
+256,Trail Backpack 0256,Sports & Outdoors,204.71,131.01,254,42
+257,Hair Brush 0257,Beauty,51.89,28.02,326,21
+258,Travel Journal 0258,Books,155.59,87.13,460,56
+259,Portable Speaker 0259,Electronics,157.45,91.32,37,33
+260,Desk Lamp 0260,Home & Kitchen,118.23,91.03,327,32
+261,Wool Scarf 0261,Clothing,231.20,129.47,432,24
+262,Exercise Band 0262,Sports & Outdoors,70.27,44.97,54,20
+263,Body Lotion 0263,Beauty,129.96,98.76,294,23
+264,Travel Journal 0264,Books,234.13,135.79,500,58
+265,Desk Charger 0265,Electronics,220.68,143.44,4,41
+266,Linen Set 0266,Home & Kitchen,288.46,124.03,426,23
+267,Running Socks 0267,Clothing,259.19,139.96,112,45
+268,Water Bottle 0268,Sports & Outdoors,67.30,53.16,347,53
+269,Skin Care Set 0269,Beauty,241.23,115.79,462,45
+270,Garden Guide 0270,Books,216.79,91.05,403,33
+271,Desk Charger 0271,Electronics,15.93,12.26,374,13
+272,Desk Lamp 0272,Home & Kitchen,34.53,20.02,382,31
+273,Canvas Jacket 0273,Clothing,62.55,32.52,402,39
+274,Water Bottle 0274,Sports & Outdoors,292.19,184.07,425,15
+275,Body Lotion 0275,Beauty,89.20,62.44,382,60
+276,Sketchbook 0276,Books,115.99,54.51,493,9
+277,USB Hub 0277,Electronics,51.12,27.60,495,59
+278,Desk Lamp 0278,Home & Kitchen,268.64,201.48,46,55
+279,Running Socks 0279,Clothing,134.29,53.71,274,12
+280,Water Bottle 0280,Sports & Outdoors,154.02,97.03,299,29
+281,Body Lotion 0281,Beauty,274.48,219.58,55,48
+282,Travel Journal 0282,Books,81.61,57.12,317,40
+283,Portable Speaker 0283,Electronics,112.48,88.85,331,9
+284,Desk Lamp 0284,Home & Kitchen,213.20,147.10,332,31
+285,Cotton Shirt 0285,Clothing,43.23,20.75,484,7
+286,Yoga Mat 0286,Sports & Outdoors,104.73,74.35,49,20
+287,Travel Kit 0287,Beauty,295.73,218.84,198,34
+288,Sketchbook 0288,Books,126.57,93.66,300,52
+289,USB Hub 0289,Electronics,243.09,119.11,335,11
+290,Linen Set 0290,Home & Kitchen,278.18,197.50,480,22
+291,Canvas Jacket 0291,Clothing,15.72,9.90,227,33
+292,Yoga Mat 0292,Sports & Outdoors,82.36,51.88,351,28
+293,Skin Care Set 0293,Beauty,183.41,113.71,203,22
+294,Sketchbook 0294,Books,67.19,31.57,46,47
+295,Wireless Headphones 0295,Electronics,74.50,59.60,25,55
+296,Coffee Grinder 0296,Home & Kitchen,114.28,62.85,402,41
+297,Canvas Jacket 0297,Clothing,72.24,31.78,300,18
+298,Water Bottle 0298,Sports & Outdoors,271.42,146.56,396,14
+299,Skin Care Set 0299,Beauty,263.42,205.46,141,59
+300,Garden Guide 0300,Books,52.41,25.15,408,16
+301,Portable Speaker 0301,Electronics,41.02,16.81,7,27
+302,Desk Lamp 0302,Home & Kitchen,263.86,145.12,8,16
+303,Canvas Jacket 0303,Clothing,91.95,39.53,379,31
+304,Yoga Mat 0304,Sports & Outdoors,177.38,83.36,243,33
+305,Skin Care Set 0305,Beauty,259.94,163.76,231,37
+306,Travel Journal 0306,Books,77.59,61.29,372,55
+307,Desk Charger 0307,Electronics,289.09,211.03,234,46
+308,Linen Set 0308,Home & Kitchen,15.20,6.53,433,30
+309,Wool Scarf 0309,Clothing,144.68,66.55,364,33
+310,Water Bottle 0310,Sports & Outdoors,29.08,13.08,311,14
+311,Body Lotion 0311,Beauty,26.52,12.72,319,45
+312,Garden Guide 0312,Books,196.81,147.60,195,43
+313,USB Hub 0313,Electronics,178.85,103.73,258,43
+314,Storage Basket 0314,Home & Kitchen,145.96,67.14,436,46
+315,Canvas Jacket 0315,Clothing,218.29,163.71,220,33
+316,Exercise Band 0316,Sports & Outdoors,296.00,159.84,173,57
+317,Hair Brush 0317,Beauty,153.60,99.84,373,11
+318,Garden Guide 0318,Books,107.41,71.96,340,21
+319,USB Hub 0319,Electronics,127.65,62.54,34,10
+320,Storage Basket 0320,Home & Kitchen,277.55,124.89,221,11
+321,Canvas Jacket 0321,Clothing,248.98,156.85,284,8
+322,Water Bottle 0322,Sports & Outdoors,197.17,147.87,343,12
+323,Hair Brush 0323,Beauty,139.61,86.55,444,51
+324,Garden Guide 0324,Books,21.85,12.67,180,11
+325,Portable Speaker 0325,Electronics,194.37,139.94,79,47
+326,Storage Basket 0326,Home & Kitchen,163.00,88.02,179,59
+327,Cotton Shirt 0327,Clothing,187.27,117.98,390,22
+328,Exercise Band 0328,Sports & Outdoors,193.12,104.28,432,40
+329,Skin Care Set 0329,Beauty,256.47,202.61,311,47
+330,Travel Journal 0330,Books,276.79,157.77,92,22
+331,Desk Charger 0331,Electronics,235.26,138.80,179,5
+332,Linen Set 0332,Home & Kitchen,64.44,31.57,35,14
+333,Cotton Shirt 0333,Clothing,247.80,198.24,46,52
+334,Exercise Band 0334,Sports & Outdoors,178.82,94.77,214,34
+335,Body Lotion 0335,Beauty,116.70,58.35,159,51
+336,Travel Journal 0336,Books,111.29,84.58,452,8
+337,Wireless Headphones 0337,Electronics,55.98,27.99,345,10
+338,Linen Set 0338,Home & Kitchen,94.16,64.02,248,43
+339,Running Socks 0339,Clothing,149.84,98.89,110,53
+340,Water Bottle 0340,Sports & Outdoors,172.88,81.25,220,12
+341,Hair Brush 0341,Beauty,97.81,75.31,269,47
+342,Cookbook 0342,Books,106.06,44.54,202,43
+343,Portable Speaker 0343,Electronics,22.95,9.18,154,18
+344,Desk Lamp 0344,Home & Kitchen,256.44,123.09,148,25
+345,Wool Scarf 0345,Clothing,44.31,17.72,382,32
+346,Exercise Band 0346,Sports & Outdoors,62.57,30.03,272,50
+347,Body Lotion 0347,Beauty,80.40,57.88,36,30
+348,Sketchbook 0348,Books,287.38,120.69,9,34
+349,USB Hub 0349,Electronics,30.51,18.30,293,30
+350,Linen Set 0350,Home & Kitchen,237.48,189.98,148,12
+351,Running Socks 0351,Clothing,137.72,56.46,87,56
+352,Water Bottle 0352,Sports & Outdoors,207.54,143.20,45,32
+353,Travel Kit 0353,Beauty,281.72,129.59,223,42
+354,Travel Journal 0354,Books,136.21,99.43,202,60
+355,Portable Speaker 0355,Electronics,106.67,65.06,170,54
+356,Storage Basket 0356,Home & Kitchen,60.09,26.43,271,37
+357,Running Socks 0357,Clothing,68.53,42.48,372,57
+358,Trail Backpack 0358,Sports & Outdoors,216.49,106.08,52,14
+359,Travel Kit 0359,Beauty,88.87,46.21,308,14
+360,Cookbook 0360,Books,254.10,111.80,487,54
+361,USB Hub 0361,Electronics,210.76,149.63,386,41
+362,Linen Set 0362,Home & Kitchen,253.99,195.57,348,41
+363,Running Socks 0363,Clothing,215.69,172.55,442,45
+364,Exercise Band 0364,Sports & Outdoors,108.59,53.20,34,35
+365,Body Lotion 0365,Beauty,149.90,119.92,407,22
+366,Garden Guide 0366,Books,198.79,85.47,259,9
+367,USB Hub 0367,Electronics,106.71,73.62,19,8
+368,Storage Basket 0368,Home & Kitchen,125.82,72.97,330,60
+369,Wool Scarf 0369,Clothing,285.26,128.36,236,42
+370,Exercise Band 0370,Sports & Outdoors,186.63,78.38,465,56
+371,Body Lotion 0371,Beauty,192.32,100.00,309,35
+372,Travel Journal 0372,Books,169.28,82.94,230,11
+373,Wireless Headphones 0373,Electronics,270.73,165.14,258,46
+374,Coffee Grinder 0374,Home & Kitchen,61.54,25.84,362,33
+375,Canvas Jacket 0375,Clothing,148.98,108.75,186,28
+376,Exercise Band 0376,Sports & Outdoors,97.69,62.52,396,26
+377,Skin Care Set 0377,Beauty,227.46,177.41,404,45
+378,Travel Journal 0378,Books,217.10,132.43,168,11
+379,Desk Charger 0379,Electronics,187.83,120.21,129,51
+380,Coffee Grinder 0380,Home & Kitchen,284.04,221.55,170,10
+381,Running Socks 0381,Clothing,195.95,96.01,158,46
+382,Trail Backpack 0382,Sports & Outdoors,233.87,152.01,304,50
+383,Hair Brush 0383,Beauty,32.76,19.32,329,55
+384,Travel Journal 0384,Books,112.63,54.06,330,47
+385,Desk Charger 0385,Electronics,143.74,103.49,9,28
+386,Coffee Grinder 0386,Home & Kitchen,106.20,54.16,174,54
+387,Canvas Jacket 0387,Clothing,164.34,85.45,70,14
+388,Yoga Mat 0388,Sports & Outdoors,30.28,17.56,259,54
+389,Skin Care Set 0389,Beauty,181.87,132.76,338,26
+390,Cookbook 0390,Books,292.17,230.81,305,29
+391,Portable Speaker 0391,Electronics,55.54,27.77,425,49
+392,Coffee Grinder 0392,Home & Kitchen,257.67,203.55,369,33
+393,Running Socks 0393,Clothing,19.31,12.74,346,51
+394,Water Bottle 0394,Sports & Outdoors,82.83,56.32,385,52
+395,Travel Kit 0395,Beauty,261.83,178.04,273,20
+396,Cookbook 0396,Books,106.40,74.48,188,48
+397,USB Hub 0397,Electronics,191.91,130.49,393,23
+398,Linen Set 0398,Home & Kitchen,259.97,166.38,494,15
+399,Canvas Jacket 0399,Clothing,272.67,141.78,446,21
+400,Water Bottle 0400,Sports & Outdoors,22.09,15.46,283,11
+401,Skin Care Set 0401,Beauty,238.11,173.82,145,10
+402,Garden Guide 0402,Books,255.05,127.52,230,37
+403,Wireless Headphones 0403,Electronics,53.28,35.69,484,19
+404,Desk Lamp 0404,Home & Kitchen,272.61,185.37,476,6
+405,Wool Scarf 0405,Clothing,140.95,60.60,257,28
+406,Yoga Mat 0406,Sports & Outdoors,82.25,52.64,191,19
+407,Skin Care Set 0407,Beauty,14.23,8.53,429,50
+408,Cookbook 0408,Books,217.97,132.96,70,7
+409,Portable Speaker 0409,Electronics,99.00,69.30,388,50
+410,Storage Basket 0410,Home & Kitchen,158.71,107.92,463,10
+411,Canvas Jacket 0411,Clothing,11.22,6.28,427,14
+412,Exercise Band 0412,Sports & Outdoors,184.83,144.16,56,54
+413,Body Lotion 0413,Beauty,99.40,54.67,62,8
+414,Sketchbook 0414,Books,83.13,54.86,32,12
+415,Wireless Headphones 0415,Electronics,279.16,198.20,323,37
+416,Coffee Grinder 0416,Home & Kitchen,193.43,106.38,149,32
+417,Running Socks 0417,Clothing,5.51,4.35,123,41
+418,Yoga Mat 0418,Sports & Outdoors,141.50,72.16,268,28
+419,Skin Care Set 0419,Beauty,27.17,19.83,199,60
+420,Sketchbook 0420,Books,159.05,66.80,191,21
+421,Desk Charger 0421,Electronics,249.88,102.45,403,9
+422,Storage Basket 0422,Home & Kitchen,117.98,64.88,395,42
+423,Canvas Jacket 0423,Clothing,245.90,149.99,22,27
+424,Trail Backpack 0424,Sports & Outdoors,183.91,112.18,425,54
+425,Hair Brush 0425,Beauty,229.35,158.25,323,16
+426,Travel Journal 0426,Books,270.91,130.03,366,54
+427,Desk Charger 0427,Electronics,154.97,65.08,103,7
+428,Storage Basket 0428,Home & Kitchen,264.23,137.39,161,24
+429,Wool Scarf 0429,Clothing,173.88,113.02,129,7
+430,Water Bottle 0430,Sports & Outdoors,251.83,130.95,182,60
+431,Body Lotion 0431,Beauty,260.86,112.16,139,12
+432,Sketchbook 0432,Books,266.92,168.15,455,30
+433,USB Hub 0433,Electronics,248.56,169.02,173,16
+434,Desk Lamp 0434,Home & Kitchen,167.59,118.98,473,56
+435,Cotton Shirt 0435,Clothing,175.15,99.83,372,32
+436,Trail Backpack 0436,Sports & Outdoors,30.86,20.67,279,23
+437,Skin Care Set 0437,Beauty,110.25,50.71,167,47
+438,Sketchbook 0438,Books,101.87,60.10,308,50
+439,USB Hub 0439,Electronics,144.62,72.31,179,33
+440,Linen Set 0440,Home & Kitchen,18.87,11.69,140,45
+441,Cotton Shirt 0441,Clothing,264.35,113.67,343,45
+442,Trail Backpack 0442,Sports & Outdoors,138.10,87.00,487,6
+443,Hair Brush 0443,Beauty,51.78,40.38,17,13
+444,Garden Guide 0444,Books,27.03,14.86,185,29
+445,Portable Speaker 0445,Electronics,190.87,80.16,347,33
+446,Linen Set 0446,Home & Kitchen,126.55,79.72,390,9
+447,Running Socks 0447,Clothing,193.06,92.66,203,25
+448,Trail Backpack 0448,Sports & Outdoors,217.84,124.16,491,12
+449,Hair Brush 0449,Beauty,13.49,6.87,265,29
+450,Garden Guide 0450,Books,189.04,88.84,396,21
+451,Portable Speaker 0451,Electronics,235.69,160.26,313,23
+452,Coffee Grinder 0452,Home & Kitchen,232.40,165.00,62,13
+453,Wool Scarf 0453,Clothing,284.45,125.15,88,50
+454,Water Bottle 0454,Sports & Outdoors,150.85,67.88,341,27
+455,Body Lotion 0455,Beauty,237.50,104.50,456,24
+456,Cookbook 0456,Books,283.97,141.98,406,28
+457,Wireless Headphones 0457,Electronics,171.70,92.71,102,55
+458,Linen Set 0458,Home & Kitchen,50.50,27.77,13,28
+459,Running Socks 0459,Clothing,186.54,141.77,239,56
+460,Yoga Mat 0460,Sports & Outdoors,185.76,89.16,33,24
+461,Hair Brush 0461,Beauty,135.46,94.82,393,31
+462,Travel Journal 0462,Books,274.79,208.84,64,25
+463,USB Hub 0463,Electronics,215.48,94.81,238,48
+464,Coffee Grinder 0464,Home & Kitchen,174.52,108.20,449,58
+465,Canvas Jacket 0465,Clothing,260.67,195.50,393,13
+466,Yoga Mat 0466,Sports & Outdoors,146.76,105.66,425,12
+467,Body Lotion 0467,Beauty,174.77,85.63,84,15
+468,Garden Guide 0468,Books,110.72,59.78,485,38
+469,Wireless Headphones 0469,Electronics,298.24,172.97,128,17
+470,Desk Lamp 0470,Home & Kitchen,213.09,159.81,64,45
+471,Cotton Shirt 0471,Clothing,104.22,82.33,257,46
+472,Trail Backpack 0472,Sports & Outdoors,60.25,46.39,87,47
+473,Body Lotion 0473,Beauty,209.62,163.50,431,41
+474,Travel Journal 0474,Books,18.49,7.58,23,46
+475,Desk Charger 0475,Electronics,257.64,195.80,333,18
+476,Linen Set 0476,Home & Kitchen,256.31,194.79,316,45
+477,Running Socks 0477,Clothing,14.92,10.59,328,24
+478,Exercise Band 0478,Sports & Outdoors,163.25,89.78,152,34
+479,Travel Kit 0479,Beauty,28.91,12.43,225,31
+480,Cookbook 0480,Books,163.67,112.93,174,43
+481,Desk Charger 0481,Electronics,52.07,31.24,375,60
+482,Coffee Grinder 0482,Home & Kitchen,118.17,76.81,389,28
+483,Cotton Shirt 0483,Clothing,173.74,130.30,163,20
+484,Water Bottle 0484,Sports & Outdoors,157.85,74.18,230,20
+485,Skin Care Set 0485,Beauty,51.16,23.53,148,29
+486,Sketchbook 0486,Books,288.16,227.64,127,60
+487,Desk Charger 0487,Electronics,57.33,34.39,97,53
+488,Linen Set 0488,Home & Kitchen,57.21,40.61,255,24
+489,Cotton Shirt 0489,Clothing,167.97,68.86,483,30
+490,Trail Backpack 0490,Sports & Outdoors,170.62,117.72,110,42
+491,Skin Care Set 0491,Beauty,120.63,51.87,144,36
+492,Garden Guide 0492,Books,200.79,140.55,274,5
+493,USB Hub 0493,Electronics,282.60,129.99,68,21
+494,Linen Set 0494,Home & Kitchen,243.38,153.32,187,7
+495,Canvas Jacket 0495,Clothing,136.26,58.59,185,40
+496,Exercise Band 0496,Sports & Outdoors,99.56,43.80,258,33
+497,Body Lotion 0497,Beauty,255.47,191.60,422,44
+498,Travel Journal 0498,Books,227.95,180.08,65,11
+499,Desk Charger 0499,Electronics,134.07,84.46,285,28
+500,Coffee Grinder 0500,Home & Kitchen,252.38,123.66,308,37
